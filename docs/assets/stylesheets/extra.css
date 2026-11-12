@@ -161,8 +161,130 @@
   margin-bottom: 0.3em;
 }
 
+/* ---------- 首頁講義卡片 ---------- */
+.kk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 1.1rem;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.md-typeset .kk-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.2rem 1.2rem;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--kk-rule);
+  border-top: 3px solid var(--kk-primary);
+  border-radius: 2px 2px 6px 6px;
+  transition: border-color 0.15s ease;
+}
+
+.md-typeset .kk-card:hover,
+.md-typeset .kk-card:focus-within {
+  border-color: var(--kk-primary);
+}
+
+.md-typeset .kk-card :where(p, ul) {
+  margin: 0;
+}
+
+.md-typeset .kk-card-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .kk-card-no {
+  font-family: var(--kk-serif);
+  font-weight: 700;
+  color: var(--kk-accent);
+}
+
+.md-typeset .kk-card-title {
+  margin-top: 0.55rem;
+  font-family: var(--kk-serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.md-typeset .kk-card-title a {
+  color: var(--kk-ink);
+}
+
+.md-typeset .kk-card-title a:hover {
+  color: var(--kk-primary);
+}
+
+.md-typeset .kk-card-desc {
+  margin-top: 0.5rem;
+  font-size: 0.74rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+  flex-grow: 1;
+}
+
+.md-typeset ul.kk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset ul.kk-chips li {
+  margin: 0;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.64rem;
+  line-height: 1.6;
+  color: var(--kk-ink);
+  background: var(--kk-primary-soft);
+  border-radius: 1rem;
+}
+
+.md-typeset .kk-card-action {
+  margin-top: 1rem;
+}
+
+.md-typeset .kk-card-action .md-button {
+  margin: 0;
+  padding: 0.35em 1.1em;
+  font-size: 0.72rem;
+  border-radius: 3px;
+}
+
+.md-typeset .kk-card-more {
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  border: 1px dashed var(--kk-rule);
+  border-top: 1px dashed var(--kk-rule);
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.76rem;
+}
+
+.md-typeset .kk-card-more:hover {
+  border-color: var(--kk-rule);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .kk-card {
+    transition: none;
+  }
+}
+
 @media screen and (max-width: 44.9375em) {
   .md-typeset {
     font-size: 0.8rem;
   }
+}
+
+[dir] .md-typeset ul.kk-chips {
+  margin-left: 0;
+  margin-right: 0;
 }

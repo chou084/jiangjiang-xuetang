@@ -12,15 +12,55 @@ hide:
 <p class="kk-lead">一個概念，一頁講義。本站以學術報告的形式整理訊號處理、統計與模型選擇、訊號偵測，以及相似度量測的核心概念。每篇講義都包含定義、推導、圖解、Python 實作與參考文獻。</p>
 </div>
 
-## 講義目錄
+## 講義
 
-| 分類 | 講義 | 內容摘要 | 前置講義 |
-| --- | --- | --- | --- |
-| 訊號處理 | [離散小波轉換（DWT）](signal-processing/dwt.md) | 以濾波器組逐層分解訊號，取得兼具時間與頻率資訊的近似與細節係數。 | 無 |
-| 訊號處理 | [小波封包分解（WPD）](signal-processing/wpd.md) | 同時分解近似與細節係數，得到均勻劃分的頻帶與能量特徵。 | DWT |
-| 統計與模型選擇 | [Akaike 資訊準則（AIC）](model-selection/aic.md) | 以對數概似與參數數量的權衡，在候選模型中選出預測能力最佳者。 | 無 |
-| 訊號偵測 | [AIC picker：起始點偵測](signal-detection/aic-picker.md) | 將訊號切為雜訊段與訊號段，以 AIC 最小值估計暫態訊號的起始時間。 | AIC |
-| 相似度與距離 | [餘弦相似性](similarity/cosine-similarity.md) | 以兩向量夾角的餘弦衡量方向一致程度，常用於特徵向量比對。 | 無 |
+<div class="kk-grid" markdown>
+
+<div class="kk-card" markdown>
+<p class="kk-card-label"><span class="kk-card-no">第 1 講</span><span class="kk-card-cat">訊號處理</span></p>
+<p class="kk-card-title" markdown="span">[離散小波轉換（DWT）](signal-processing/dwt.md)</p>
+<p class="kk-card-desc">以濾波器組逐層分解訊號，取得兼具時間與頻率資訊的近似與細節係數。</p>
+<ul class="kk-chips"><li>10 條公式</li><li>2 張圖</li><li>前置：無</li></ul>
+<p class="kk-card-action" markdown="span">[開始閱讀](signal-processing/dwt.md){ .md-button }</p>
+</div>
+
+<div class="kk-card" markdown>
+<p class="kk-card-label"><span class="kk-card-no">第 2 講</span><span class="kk-card-cat">訊號處理</span></p>
+<p class="kk-card-title" markdown="span">[小波封包分解（WPD）](signal-processing/wpd.md)</p>
+<p class="kk-card-desc">同時分解近似與細節係數，得到均勻劃分的頻帶與能量特徵。</p>
+<ul class="kk-chips"><li>7 條公式</li><li>2 張圖</li><li>前置：DWT</li></ul>
+<p class="kk-card-action" markdown="span">[開始閱讀](signal-processing/wpd.md){ .md-button }</p>
+</div>
+
+<div class="kk-card" markdown>
+<p class="kk-card-label"><span class="kk-card-no">第 3 講</span><span class="kk-card-cat">統計與模型選擇</span></p>
+<p class="kk-card-title" markdown="span">[Akaike 資訊準則（AIC）](model-selection/aic.md)</p>
+<p class="kk-card-desc">以對數概似與參數數量的權衡，在候選模型中選出預測能力最佳者。</p>
+<ul class="kk-chips"><li>8 條公式</li><li>1 張圖</li><li>前置：無</li></ul>
+<p class="kk-card-action" markdown="span">[開始閱讀](model-selection/aic.md){ .md-button }</p>
+</div>
+
+<div class="kk-card" markdown>
+<p class="kk-card-label"><span class="kk-card-no">第 4 講</span><span class="kk-card-cat">訊號偵測</span></p>
+<p class="kk-card-title" markdown="span">[AIC picker：起始點偵測](signal-detection/aic-picker.md)</p>
+<p class="kk-card-desc">將訊號切為雜訊段與訊號段，以 AIC 最小值估計暫態訊號的起始時間。</p>
+<ul class="kk-chips"><li>3 條公式</li><li>1 張圖</li><li>前置：AIC</li></ul>
+<p class="kk-card-action" markdown="span">[開始閱讀](signal-detection/aic-picker.md){ .md-button }</p>
+</div>
+
+<div class="kk-card" markdown>
+<p class="kk-card-label"><span class="kk-card-no">第 5 講</span><span class="kk-card-cat">相似度與距離</span></p>
+<p class="kk-card-title" markdown="span">[餘弦相似性](similarity/cosine-similarity.md)</p>
+<p class="kk-card-desc">以兩向量夾角的餘弦衡量方向一致程度，常用於特徵向量比對。</p>
+<ul class="kk-chips"><li>6 條公式</li><li>1 張圖</li><li>前置：無</li></ul>
+<p class="kk-card-action" markdown="span">[開始閱讀](similarity/cosine-similarity.md){ .md-button }</p>
+</div>
+
+<div class="kk-card kk-card-more">
+<p>更多講義，陸續加入中</p>
+</div>
+
+</div>
 
 ## 建議閱讀順序
 
@@ -50,7 +90,3 @@ hide:
 7. 限制與注意事項
 8. 相關講義
 9. 參考文獻
-
-## 關於本站
-
-本站以 [MkDocs](https://www.mkdocs.org/) 與 Material for MkDocs 建置，並部署於 GitHub Pages。講義格式、檔案命名與新增流程統一記載於專案根目錄的 `AGENTS.md`，人與 AI 都依照同一份規則撰寫內容。文中的圖片皆由 `scripts/figures/` 內的 Python 腳本產生，可重現。

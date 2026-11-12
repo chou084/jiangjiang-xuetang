@@ -1,0 +1,290 @@
+/* 講講講講小學堂：全站樣式
+ * 配色與 scripts/figures/_common.py 保持一致。
+ * 修改配色或字體前，請先閱讀 AGENTS.md「視覺風格」一節。
+ */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&display=swap");
+
+:root {
+  --kk-ink: #1f2a33;
+  --kk-primary: #1e4d5c;
+  --kk-primary-soft: #eef4f6;
+  --kk-accent: #b0782a;
+  --kk-accent-soft: #f7efe2;
+  --kk-rule: #d9e1e5;
+  --kk-serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+}
+
+:root > * {
+  --md-primary-fg-color: #1e4d5c;
+  --md-primary-fg-color--light: #2e6b7e;
+  --md-primary-fg-color--dark: #143843;
+  --md-accent-fg-color: #b0782a;
+  --md-accent-fg-color--transparent: rgba(176, 120, 42, 0.1);
+  --md-typeset-a-color: #1d6378;
+}
+
+[data-md-color-scheme="slate"] {
+  --kk-ink: #e3e8eb;
+  --kk-primary: #8cc4d4;
+  --kk-primary-soft: rgba(140, 196, 212, 0.1);
+  --kk-accent: #e0a84f;
+  --kk-accent-soft: rgba(224, 168, 79, 0.12);
+  --kk-rule: rgba(227, 232, 235, 0.16);
+  --md-typeset-a-color: #8cc4d4;
+  --md-accent-fg-color: #e0a84f;
+}
+
+/* ---------- 內文排版 ---------- */
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.85;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: var(--kk-serif);
+  color: var(--kk-ink);
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  margin-bottom: 0.8em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  margin-top: 2.2em;
+  padding-top: 0.9em;
+  border-top: 1px solid var(--kk-rule);
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+}
+
+.md-typeset p,
+.md-typeset li {
+  max-width: 42em;
+}
+
+/* ---------- 圖片與圖說 ---------- */
+.md-typeset figure {
+  margin: 1.8em auto;
+  max-width: 100%;
+}
+
+.md-typeset figure img {
+  background: #fff;
+  padding: 0.6rem;
+  border: 1px solid var(--kk-rule);
+  border-radius: 3px;
+}
+
+.md-typeset figcaption {
+  max-width: 38em;
+  margin-top: 0.6em;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+  font-style: normal;
+}
+
+/* ---------- 公式 ---------- */
+.md-typeset div.arithmatex {
+  overflow-x: auto;
+  padding: 0.2em 0;
+}
+
+/* ---------- 表格 ---------- */
+.md-typeset table:not([class]) {
+  font-size: 0.74rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--kk-primary-soft);
+  color: var(--kk-ink);
+}
+
+/* ---------- 參考文獻 ---------- */
+.md-typeset .references ol {
+  font-size: 0.74rem;
+  line-height: 1.6;
+}
+
+.md-typeset .references li {
+  margin-bottom: 0.5em;
+}
+
+/* ---------- 首頁 ---------- */
+.kk-hero {
+  padding: 1.6rem 0 0.4rem;
+}
+
+.md-typeset .kk-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  font-family: var(--kk-serif);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 7vw, 4rem);
+  line-height: 1.15;
+  color: var(--kk-primary);
+}
+
+.kk-title .kk-echo-2 { font-size: 0.8em; opacity: 0.72; }
+.kk-title .kk-echo-3 { font-size: 0.62em; opacity: 0.5; }
+.kk-title .kk-echo-4 { font-size: 0.48em; opacity: 0.32; }
+.kk-title .kk-rest {
+  margin-left: 0.18em;
+  color: var(--kk-ink);
+}
+
+.kk-wave {
+  display: block;
+  width: min(100%, 34rem);
+  height: auto;
+  margin: 0.4rem 0 1.2rem;
+  color: var(--kk-accent);
+}
+
+.md-typeset .kk-lead {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  max-width: 34em;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .kk-path li {
+  margin-bottom: 0.3em;
+}
+
+/* ---------- 首頁講義卡片 ---------- */
+.kk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 1.1rem;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.md-typeset .kk-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.2rem 1.2rem;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--kk-rule);
+  border-top: 3px solid var(--kk-primary);
+  border-radius: 2px 2px 6px 6px;
+  transition: border-color 0.15s ease;
+}
+
+.md-typeset .kk-card:hover,
+.md-typeset .kk-card:focus-within {
+  border-color: var(--kk-primary);
+}
+
+.md-typeset .kk-card :where(p, ul) {
+  margin: 0;
+}
+
+.md-typeset .kk-card-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .kk-card-no {
+  font-family: var(--kk-serif);
+  font-weight: 700;
+  color: var(--kk-accent);
+}
+
+.md-typeset .kk-card-title {
+  margin-top: 0.55rem;
+  font-family: var(--kk-serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.md-typeset .kk-card-title a {
+  color: var(--kk-ink);
+}
+
+.md-typeset .kk-card-title a:hover {
+  color: var(--kk-primary);
+}
+
+.md-typeset .kk-card-desc {
+  margin-top: 0.5rem;
+  font-size: 0.74rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+  flex-grow: 1;
+}
+
+.md-typeset ul.kk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset ul.kk-chips li {
+  margin: 0;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.64rem;
+  line-height: 1.6;
+  color: var(--kk-ink);
+  background: var(--kk-primary-soft);
+  border-radius: 1rem;
+}
+
+.md-typeset .kk-card-action {
+  margin-top: 1rem;
+}
+
+.md-typeset .kk-card-action .md-button {
+  margin: 0;
+  padding: 0.35em 1.1em;
+  font-size: 0.72rem;
+  border-radius: 3px;
+}
+
+.md-typeset .kk-card-more {
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  border: 1px dashed var(--kk-rule);
+  border-top: 1px dashed var(--kk-rule);
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.76rem;
+}
+
+.md-typeset .kk-card-more:hover {
+  border-color: var(--kk-rule);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .kk-card {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset {
+    font-size: 0.8rem;
+  }
+}
+
+[dir] .md-typeset ul.kk-chips {
+  margin-left: 0;
+  margin-right: 0;
+}
