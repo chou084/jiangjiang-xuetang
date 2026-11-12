@@ -42,7 +42,6 @@ mkdocs build --strict # 部署前必須通過，任何警告都視為錯誤
 ```
 .
 ├── AGENTS.md                      ← 本文件
-├── README.md                      ← 專案說明與部署步驟
 ├── mkdocs.yml                     ← 網站設定與導覽目錄（nav）
 ├── requirements.txt               ← 建置網站所需套件
 ├── templates/
