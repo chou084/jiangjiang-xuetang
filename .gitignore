@@ -1,0 +1,12 @@
+# MkDocs 建置輸出
+site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系統檔
+.DS_Store
+Thumbs.db

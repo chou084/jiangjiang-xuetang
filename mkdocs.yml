@@ -1,0 +1,78 @@
+# 講講講講小學堂：MkDocs 設定檔
+# 新增講義後，必須在下方 nav 對應分類中加入一行（規則見 AGENTS.md）。
+
+site_name: 講講講講小學堂
+site_description: 以學術報告形式整理的概念小講義：訊號處理、統計與模型選擇、訊號偵測、相似度與距離。
+site_author: 講講講講小學堂
+# 部署後請改成自己的網址，例如 https://<帳號>.github.io/jiangjiang-xuetang/
+# site_url: https://<帳號>.github.io/jiangjiang-xuetang/
+# repo_url: https://github.com/<帳號>/jiangjiang-xuetang
+copyright: 講講講講小學堂｜內容以學習與課堂報告為目的整理
+
+theme:
+  name: material
+  language: zh-TW
+  font:
+    text: Noto Sans TC
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切換為深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切換為淺色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - def_list
+  - toc:
+      permalink: "¶"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首頁: index.md
+  - 訊號處理:
+      - 離散小波轉換（DWT）: signal-processing/dwt.md
+      - 小波封包分解（WPD）: signal-processing/wpd.md
+  - 統計與模型選擇:
+      - Akaike 資訊準則（AIC）: model-selection/aic.md
+  - 訊號偵測:
+      - AIC picker：起始點偵測: signal-detection/aic-picker.md
+  - 相似度與距離:
+      - 餘弦相似性: similarity/cosine-similarity.md
